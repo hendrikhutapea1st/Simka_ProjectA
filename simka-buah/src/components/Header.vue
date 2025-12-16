@@ -1,5 +1,5 @@
 <template>
-  <header class="bg-white shadow-sm animate-slide-in-down" role="banner">
+  <header class="sticky top-0 z-50 bg-white/80 backdrop-blur-md border-b border-green-100/50 shadow-sm transition-all duration-300" role="banner">
     <div class="container mx-auto px-4 py-4 flex justify-between items-center">
       <div class="flex items-center animate-fade-in-left">
         <img 
@@ -7,12 +7,12 @@
           alt="Logo SIMKA Buah Medan" 
           class="h-10 w-10 rounded-full object-cover mr-2 sm:mr-3 border-2 border-green-200 shadow-sm"
         />
-        <h1 class="text-lg sm:text-xl font-bold text-green-600">SIMKA Buah Medan</h1>
+        <h1 class="text-lg sm:text-xl font-bold text-green-700 tracking-tight">SIMKA Buah Medan</h1>
       </div>
 
       <!-- Mobile menu button -->
       <button
-        class="md:hidden text-gray-600 focus:outline-none animate-fade-in-right"
+        class="md:hidden text-gray-600 focus:outline-none animate-fade-in-right p-2 hover:bg-green-50 rounded-full transition-colors"
         @click="toggleMobileMenu"
         :aria-expanded="mobileMenuOpen"
         aria-controls="mobile-menu"
@@ -53,12 +53,12 @@
       </button>
 
       <!-- Desktop navigation -->
-      <nav class="hidden md:flex space-x-4 lg:space-x-6 xl:space-x-8 animate-fade-in-right" role="navigation" aria-label="Navigasi utama">
-        <a href="#home" class="text-gray-700 hover:text-green-600 font-medium text-sm sm:text-base">Beranda</a>
-        <a href="#features" class="text-gray-700 hover:text-green-600 font-medium text-sm sm:text-base">Keunggulan</a>
-        <a href="#gallery" class="text-gray-700 hover:text-green-600 font-medium text-sm sm:text-base">Galeri</a>
-        <a href="#testimoni" class="text-gray-700 hover:text-green-600 font-medium text-sm sm:text-base">Testimoni</a>
-        <a href="#cta" class="text-gray-700 hover:text-green-600 font-medium text-sm sm:text-base">Hubungi</a>
+      <nav class="hidden md:flex items-center space-x-1 animate-fade-in-right" role="navigation" aria-label="Navigasi utama">
+        <a href="#home" class="px-4 py-2 text-gray-600 hover:text-green-700 hover:bg-green-50 rounded-full transition-all duration-300 font-medium text-sm sm:text-base">Beranda</a>
+        <a href="#features" class="px-4 py-2 text-gray-600 hover:text-green-700 hover:bg-green-50 rounded-full transition-all duration-300 font-medium text-sm sm:text-base">Keunggulan</a>
+        <a href="#gallery" class="px-4 py-2 text-gray-600 hover:text-green-700 hover:bg-green-50 rounded-full transition-all duration-300 font-medium text-sm sm:text-base">Galeri</a>
+        <a href="#testimoni" class="px-4 py-2 text-gray-600 hover:text-green-700 hover:bg-green-50 rounded-full transition-all duration-300 font-medium text-sm sm:text-base">Testimoni</a>
+        <a href="#cta" class="px-4 py-2 text-green-700 bg-green-50 hover:bg-green-100 hover:text-green-800 rounded-full transition-all duration-300 font-bold text-sm sm:text-base shadow-sm hover:shadow">Hubungi</a>
       </nav>
     </div>
 

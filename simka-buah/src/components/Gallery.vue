@@ -1,52 +1,58 @@
 <template>
-  <section id="gallery" class="py-8 sm:py-12 md:py-16 bg-gray-50" aria-labelledby="gallery-heading">
+  <section id="gallery" class="py-12 sm:py-16 md:py-20 bg-gray-50" aria-labelledby="gallery-heading">
     <div class="container mx-auto px-4">
-      <div class="text-center mb-8 sm:mb-10">
-        <h2 id="gallery-heading" class="text-2xl sm:text-3xl md:text-4xl font-bold text-gray-800 mb-3 sm:mb-4">Galeri SIMKA BUAH MEDAN</h2>
-        <p class="text-gray-600 max-w-xl sm:max-w-2xl mx-auto text-sm sm:text-base">Beberapa contoh produk <strong>buah - salad buah - parcel buah </strong> berkualitas yang kami sediakan untuk Anda</p>
+      <div class="text-center mb-10 sm:mb-14">
+        <h2 id="gallery-heading" class="text-3xl sm:text-4xl md:text-5xl font-bold text-gray-900 mb-4 tracking-tight">Galeri <span class="text-green-600">Simka Buah</span></h2>
+        <p class="text-gray-600 max-w-2xl mx-auto text-base sm:text-lg leading-relaxed">Nikmati kesegaran berbagai pilihan buah premium, salad buah, dan parcel eksklusif kami.</p>
       </div>
 
-      <div class="relative overflow-hidden py-6 sm:py-8">
+      <div class="relative overflow-hidden py-4">
         <div class="carousel-wrapper">
           <div class="carousel-track" ref="carouselTrackRef">
             <!-- Set pertama gambar -->
             <div
               v-for="(image, index) in images"
               :key="'first-'+index"
-              class="carousel-item overflow-hidden rounded-xl shadow-md hover:shadow-lg transition-shadow mx-2 flex-shrink-0 w-56 sm:w-60 md:w-64 relative"
+              class="carousel-item overflow-hidden rounded-2xl shadow-lg bg-white mx-3 flex-shrink-0 w-64 sm:w-72 md:w-80 relative group hover:-translate-y-2 transition-all duration-300"
             >
-              <img
-                :src="image.src"
-                :alt="image.alt"
-                class="w-full h-40 sm:h-48 md:h-64 object-cover"
-                loading="lazy"
-              />
-              <div v-if="image.label" class="absolute top-2 left-2 bg-gradient-to-r from-green-500 to-emerald-600 text-white text-xs font-bold px-3 py-1.5 rounded-lg shadow-md z-10 transform transition duration-300 hover:scale-105">
-                {{ image.label }}
+              <div class="relative h-48 sm:h-56 overflow-hidden">
+                <img
+                  :src="image.src"
+                  :alt="image.alt"
+                  class="w-full h-full object-cover transform group-hover:scale-110 transition-transform duration-500"
+                  loading="lazy"
+                />
+                <div v-if="image.label" class="absolute top-3 left-3 bg-white/90 backdrop-blur-sm text-green-700 text-xs font-bold px-3 py-1.5 rounded-full shadow-sm">
+                  {{ image.label }}
+                </div>
               </div>
-              <div class="p-3 sm:p-4 bg-white">
-                <h3 class="font-bold text-gray-800 text-sm sm:text-base">{{ image.title }}</h3>
-                <p class="text-gray-600 text-xs sm:text-sm">{{ image.description }}</p>
+              
+              <div class="p-5 border-t border-gray-100">
+                <h3 class="font-bold text-gray-900 text-lg mb-1">{{ image.title }}</h3>
+                <p class="text-gray-500 text-sm line-clamp-2">{{ image.description }}</p>
               </div>
             </div>
             <!-- Duplikat set gambar untuk efek looping -->
             <div
               v-for="(image, index) in images"
               :key="'second-'+index"
-              class="carousel-item overflow-hidden rounded-xl shadow-md hover:shadow-lg transition-shadow mx-2 flex-shrink-0 w-56 sm:w-60 md:w-64 relative"
+              class="carousel-item overflow-hidden rounded-2xl shadow-lg bg-white mx-3 flex-shrink-0 w-64 sm:w-72 md:w-80 relative group hover:-translate-y-2 transition-all duration-300"
             >
-              <img
-                :src="image.src"
-                :alt="image.alt"
-                class="w-full h-40 sm:h-48 md:h-64 object-cover"
-                loading="lazy"
-              />
-              <div v-if="image.label" class="absolute top-2 left-2 bg-gradient-to-r from-green-500 to-emerald-600 text-white text-xs font-bold px-3 py-1.5 rounded-lg shadow-md z-10 transform transition duration-300 hover:scale-105">
-                {{ image.label }}
+              <div class="relative h-48 sm:h-56 overflow-hidden">
+                <img
+                  :src="image.src"
+                  :alt="image.alt"
+                  class="w-full h-full object-cover transform group-hover:scale-110 transition-transform duration-500"
+                  loading="lazy"
+                />
+                <div v-if="image.label" class="absolute top-3 left-3 bg-white/90 backdrop-blur-sm text-green-700 text-xs font-bold px-3 py-1.5 rounded-full shadow-sm">
+                  {{ image.label }}
+                </div>
               </div>
-              <div class="p-3 sm:p-4 bg-white">
-                <h3 class="font-bold text-gray-800 text-sm sm:text-base">{{ image.title }}</h3>
-                <p class="text-gray-600 text-xs sm:text-sm">{{ image.description }}</p>
+              
+              <div class="p-5 border-t border-gray-100">
+                <h3 class="font-bold text-gray-900 text-lg mb-1">{{ image.title }}</h3>
+                <p class="text-gray-500 text-sm line-clamp-2">{{ image.description }}</p>
               </div>
             </div>
           </div>

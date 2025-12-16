@@ -19,6 +19,9 @@ export default {
         'slide-left': 'slideLeft 20s linear infinite',
         'slide-left-reverse': 'slideLeftReverse 25s linear infinite',
       },
+      fontFamily: {
+        sans: ['Outfit', 'sans-serif'],
+      },
       keyframes: {
         fadeInUp: {
           '0%': { opacity: 0, transform: 'translateY(20px)' },
@@ -69,31 +72,31 @@ export default {
   },
   safelist: [
     // Safelist untuk warna
-    'bg-green-50', 'bg-green-100', 'bg-green-200', 'bg-green-500', 'bg-green-600', 'bg-green-700', 
+    'bg-green-50', 'bg-green-100', 'bg-green-200', 'bg-green-500', 'bg-green-600', 'bg-green-700',
     'bg-emerald-50', 'bg-emerald-500', 'bg-emerald-600',
     'bg-yellow-100', 'bg-gray-800', 'bg-gray-50', 'bg-white',
     'text-green-600', 'text-green-400', 'text-gray-800', 'text-gray-700', 'text-gray-600', 'text-gray-300', 'text-gray-500',
     'text-white', 'text-green-100',
     'border-green-600',
-    
+
     // Safelist untuk ukuran
     'w-16', 'h-16', 'h-8', 'w-8', 'w-6', 'h-6', 'h-5', 'w-5',
     'w-32', 'h-32', 'w-40', 'h-40', 'w-64', 'h-64', 'w-full', 'h-48',
     'w-80',
-    
+
     // Safelist untuk layout dan spacing
     'grid-cols-1', 'grid-cols-2', 'grid-cols-3', 'grid-cols-4',
-    
+
     // Safelist untuk efek
     'shadow-sm', 'shadow-md', 'shadow-lg', 'shadow', 'rounded-xl', 'rounded-full',
-    
+
     // Safelist untuk interaksi
     'hover:shadow-md', 'hover:bg-green-700', 'hover:bg-green-50', 'hover:text-green-600', 'hover:text-white',
-    
+
     // Safelist untuk breakpoints
     'md:w-1/2', 'md:flex-row', 'md:flex', 'md:flex-col', 'md:grid-cols-2', 'md:grid-cols-4',
     'md:text-4xl', 'md:text-5xl', 'md:w-80', 'md:h-80', 'md:w-40', 'md:h-40', 'md:py-24', 'md:mb-0',
-    
+
     // Safelist untuk utilities
     'flex', 'items-center', 'justify-center', 'text-center', 'space-y-3', 'space-x-8', 'space-x-4',
     'py-16', 'py-12', 'py-4', 'py-3', 'py-2', 'px-4', 'px-8', 'px-10', 'px-6',
